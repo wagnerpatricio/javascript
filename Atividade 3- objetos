@@ -1,0 +1,58 @@
+var pessoa = new Object();
+pessoa.nome = pessoa.nome;
+parseInt(pessoa.idade);
+pessoa.filiacao = Array(2).fill(0);
+
+var endereco = new Object();
+endereco.rua = endereco.rua;
+endereco.cidade = endereco.cidade;
+endereco.estado = endereco.estado;
+
+function dadosCompletos() {
+    if (pessoa.nome == "" || pessoa.nome == null) {
+        console.log("Nome vazio ou nulo!\n");
+    }
+    if (pessoa.idade == "" || pessoa.idade == null) {
+        console.log("Idade vazio ou nulo!\n");
+    }
+    if (pessoa.filiacao[0] == "" || pessoa.filiacao[0] == null) {
+        console.log("Nome do pai vazio ou nulo!\n");
+    }
+    if (pessoa.filiacao[1] == "" || pessoa.filiacao[1] == null) {
+        console.log("Nome do mãe vazio ou nulo!\n");
+
+    }
+    if (endereco.rua == "" || endereco.rua == null) {
+        console.log("Nome da rua vazio ou nulo!\n");
+    }
+    if (endereco.cidade == "" || endereco.cidade == null) {
+        console.log("Nome da cidade vazio ou nulo!\n");
+    }
+    if (endereco.estado == "" || endereco.estado == null) {
+        console.log("Nome do estado vazio!\n");
+    }  
+    else {
+      console.log("Todos dados OK!");
+    }
+} 
+function total() {
+    pessoa.nome = prompt("Digite nome: ");
+    pessoa.idade = parseInt(prompt("Digite idade: "));
+    pessoa.filiacao[0] = prompt("Digite nome do pai: ");
+    pessoa.filiacao[1] = prompt("Digite nome da mãe: ");
+    endereco.rua = prompt("Digite nome da rua: ");
+    endereco.cidade = prompt("Digite nome da cidade:");
+    endereco.estado = prompt("Digite nome do estado:");
+
+    console.log("Nome: " + pessoa.nome + ", tipo: " + typeof(pessoa.nome));
+    console.log("Idade: " + pessoa.idade + ", tipo: " + typeof(pessoa.idade));
+    console.log("Nome do pai: " + pessoa.filiacao[0] + ", tipo: " + typeof(pessoa.filiacao[0]));
+    console.log("Nome da mãe: " + pessoa.filiacao[1] + ", tipo: " + typeof(pessoa.filiacao[1]));
+    console.log("Nome da rua: " + endereco.rua + ", tipo: " + typeof(endereco.rua));
+    console.log("Nome da cidade: " + endereco.cidade + ", tipo: " + typeof(endereco.cidade));
+    console.log("Nome do estado: " + endereco.estado + ", tipo: " + typeof(endereco.estado));
+
+    dadosCompletos();
+}
+
+total();
